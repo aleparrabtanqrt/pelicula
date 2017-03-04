@@ -5,14 +5,18 @@
  */
 package co.edu.ims.modelo;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**a
  *
  * @author Silvia
  */
+@Entity
 public class Genero {
     
-    
-    private int codigo;
+    @Id
+    private Integer codigo;
     private String descripcion;
     public Genero(){
         
@@ -33,7 +37,7 @@ public class Genero {
         return " Codigo -> " + codigo +"\n"+ " Descripcion -> " + descripcion +"\n";
     }
 
-    public int getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 

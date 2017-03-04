@@ -5,18 +5,26 @@
  */
 package co.edu.ims.modelo;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  *
  * @author Silvia
  */
+@Entity
 public class Persona {
+    
+    @Id
+    private int doc;
     private String nombre;
     private int edad;
     private String nacionalidad;
     public Persona(){
         
     }
-   public Persona(String n, int e, String na) {
+   public Persona(int d, String n, int e, String na) {
+        this.doc = d;
         this.nombre = n;
         this.edad = e;
         this.nacionalidad = na;
@@ -32,7 +40,14 @@ public class Persona {
     //mostrar datos sirve para acceder a los atributos de la clase
 
     public String MostrarDatos() {
-        return " Nombre -> " + nombre +"\n"+ " Edad -> " + edad +"\n"+ " Nacionalidad -> " + nacionalidad;
+        return " Documento -> " + doc +"\n"+ " Nombre -> " + nombre +"\n"+ " Edad -> " + edad +"\n"+ " Nacionalidad -> " + nacionalidad;
+    }
+    public int getDoc() {
+        return doc;
+    }
+
+    public void setDoc(int doc) {
+        this.doc = doc;
     }
 
     public String getNombre() {

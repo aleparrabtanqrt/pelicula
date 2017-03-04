@@ -5,11 +5,16 @@
  */
 package co.edu.ims.modelo;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  *
  * @author Silvia
  */
+@Entity
 public class Comentario {
+    @Id
     private String mensaje;
     private String nombre;
     private String fecha;
